@@ -8,8 +8,13 @@ def create
   @post = Post.new(post_params)
   @post.save
   #あとでやる
-  redirect_to"/posts/#{@spost.id}"
+  redirect_to"/posts/#{@post.id}"
 end
+
+def show
+  @post = Post.find(params[:id])
+end
+
 
 private
 
